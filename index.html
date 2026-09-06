@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homefront Interiors & Furniture | Digital Showroom Lekki Lagos</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Compact Header & Navigation Adjustments for Mobile */
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0.5rem 1rem !important;
+      }
+      .logo {
+        font-size: 1.1rem !important;
+      }
+      .logo span {
+        display: none; /* Hides sub-logo text on small screens */
+      }
+      .nav-actions {
+        gap: 0.5rem !important;
+      }
+      .nav-actions .btn-outline {
+        padding: 0.35rem 0.6rem !important;
+        font-size: 0.75rem !important;
+      }
+      .hero {
+        padding: 2.5rem 1rem !important;
+      }
+      .hero-content h1 {
+        font-size: 1.6rem !important;
+      }
+      .hero-content p {
+        font-size: 0.9rem !important;
+      }
+      .hero-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .hero-cta .btn-gold, 
+      .hero-cta .btn-outline {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +60,8 @@
         <a href="faq.html">FAQ & Guides</a>
       </nav>
       <div class="nav-actions">
-        <a href="tel:08066723960" class="btn-outline">📞 080 667 23 960</a>
+        <!-- Optimized Phone Link Button for Small Mobile Viewports -->
+        <a href="tel:08066723960" class="btn-outline" aria-label="Call Homefront">📞 Call Us</a>
         <button class="mobile-toggle">☰</button>
       </div>
     </div>
