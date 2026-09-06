@@ -1,0 +1,119 @@
+/* ==========================================================================
+   HOMEFRONT INTERIORS & FURNITURE - RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Large Monitors & Desktops (Above 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
+/* Tablets & Small Desktops (Up to 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --space-3xl: 4rem;
+    --space-2xl: 3rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: var(--space-2xl) 0;
+  }
+}
+
+/* Mobile & Small Tablets (Up to 768px) */
+@media (max-width: 768px) {
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-main);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-dropdown);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    z-index: 999;
+  }
+
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: var(--space-md);
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    width: 100%;
+    display: block;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .btn-header-cta {
+    display: none;
+  }
+
+  .hero-badge-bar {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+/* Small Screens / Mobiles (Up to 480px) */
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .category-card {
+    height: 280px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-footer {
+    flex-direction: column;
+  }
+}

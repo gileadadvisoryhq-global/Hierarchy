@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue Search Tool | Homefront Interiors</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">Homefront <span>Interiors</span></a>
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Catalogue</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="showroom.html">Showroom</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Enquire / Order</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="search.html" class="btn btn-outline" style="padding: 0.4rem 0.8rem;">Search</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 800px;">
+    <h1>Instant Catalogue Search Tool</h1>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Type keywords such as "Sofa", "Hardwood", "Dining", or "Office Desk" below.</p>
+
+    <div class="form-group" style="display: flex; gap: 0.5rem;">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search product titles, features, or materials...">
+      <button class="btn btn-accent" onclick="executeSearch()">Search</button>
+    </div>
+
+    <div id="searchResults" style="margin-top: 2rem;">
+      <p style="color: var(--text-muted);">Results will display here after typing a query.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      &copy; Homefront Interiors and Furniture. Ikota Shopping Complex, Road 5, Shop K-88, VGC, Lekki, Lagos.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function executeSearch() {
+      const query = document.getElementById('searchInput').value.trim();
+      const resultsContainer = document.getElementById('searchResults');
+      if (!query) {
+        resultsContainer.innerHTML = '<p style="color: var(--text-muted);">Please enter a keyword to search.</p>';
+        return;
+      }
+      
+      // Simple mock match execution
+      resultsContainer.innerHTML = `
+        <h3>Search Results for "${query}"</h3>
+        <div class="product-card" style="margin-top: 1rem;">
+          <div class="product-title">Matching Furniture Item for "${query}"</div>
+          <p class="product-meta">Category: Interior Collections</p>
+          <a href="product.html?id=101" class="btn btn-outline" style="margin-top: 0.5rem;">View Specification</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

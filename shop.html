@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniture Catalogue | Homefront Interiors</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">HOMEFRONT <span>FURNITURE</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop Furniture</a>
+        <a href="about.html">About Us</a>
+        <a href="showroom.html">Showroom</a>
+        <a href="faq.html">FAQ & Guides</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:08066723960" class="btn-outline">📞 080 667 23 960</a>
+        <button class="mobile-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter & Catalogue Container -->
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Interior Furniture Catalogue</h1>
+      <p class="section-subtitle">Browse through our current inventory and showroom collection</p>
+
+      <!-- Search and Filter Bar -->
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; background: var(--secondary-bg); padding: 1.25rem; border-radius: 8px;">
+        <div style="flex: 2; min-width: 220px;">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search furniture by name or keyword...">
+        </div>
+        <div style="flex: 1; min-width: 160px;">
+          <select id="categoryFilter" class="form-control">
+            <option value="all">All Categories</option>
+            <option value="living">Living Room</option>
+            <option value="bedroom">Bedroom</option>
+            <option value="dining">Dining Room</option>
+            <option value="office">Executive Office</option>
+            <option value="accent">Accent Furniture</option>
+          </select>
+        </div>
+        <div style="flex: 1; min-width: 160px;">
+          <select id="sortSelect" class="form-control">
+            <option value="default">Sort Options</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Catalogue Product Grid (Populated dynamically by shop.js) -->
+      <div class="products-grid" id="shopGrid">
+        <!-- Javascript renders cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Product Enquiry Modal -->
+  <div class="modal" id="enquiryModal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>Product Enquiry</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size:0.9rem;">Fill in your details and our Lekki sales team will contact you with availability and delivery quotes.</p>
+      
+      <form id="enquiryForm">
+        <div class="form-group">
+          <label for="enquiryProductSelect">Selected Item</label>
+          <select id="enquiryProductSelect" class="form-control">
+            <option value="Lekki Velvet Corner Sectional">Lekki Velvet Corner Sectional</option>
+            <option value="Royal Monarch King Bed Frame">Royal Monarch King Bed Frame</option>
+            <option value="Ikota Marble Top 8-Seater Dining Set">Ikota Marble Top 8-Seater Dining Set</option>
+            <option value="Executive Ergonomic Boss Desk">Executive Ergonomic Boss Desk</option>
+            <option value="Gold Accent Minimalist Side Table">Gold Accent Minimalist Side Table</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" class="form-control" required placeholder="e.g. Chukwuma Adeleke">
+        </div>
+        <div class="form-group">
+          <label>Phone Number / WhatsApp</label>
+          <input type="tel" class="form-control" required placeholder="08012345678">
+        </div>
+        <div class="form-group">
+          <label>Delivery Location in Lagos/Nigeria</label>
+          <input type="text" class="form-control" placeholder="e.g. Victoria Island, Lagos">
+        </div>
+        <div class="form-group">
+          <label>Message / Customisation Requirements</label>
+          <textarea class="form-control" rows="3" placeholder="Specify fabric preferences, space dimensions, or delivery dates..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold" style="width: 100%;">Submit Product Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Homefront Interiors & Furniture. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lekki Velvet Corner Sectional | Homefront Interiors</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">HOMEFRONT <span>FURNITURE</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop Furniture</a>
+        <a href="about.html">About Us</a>
+        <a href="showroom.html">Showroom</a>
+        <a href="faq.html">FAQ & Guides</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:08066723960" class="btn-outline">📞 080 667 23 960</a>
+        <button class="mobile-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Section -->
+  <section class="section">
+    <div class="container">
+      <div class="pdp-grid">
+        <!-- Gallery Section -->
+        <div>
+          <div class="gallery-main">
+            <img id="pdpMainImg" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Lekki Velvet Corner Sectional">
+          </div>
+          <div class="gallery-thumbs">
+            <img class="thumb-img active" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80" onclick="document.getElementById('pdpMainImg').src=this.src" alt="Thumbnail 1">
+            <img class="thumb-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=200&q=80" onclick="document.getElementById('pdpMainImg').src=this.src" alt="Thumbnail 2">
+          </div>
+        </div>
+
+        <!-- Product Information Answers Core 7 PRD Questions -->
+        <div class="pdp-info">
+          <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase;">Living Room</span>
+          <h1>Lekki Velvet Corner Sectional</h1>
+          <div class="pdp-price">₦850,000</div>
+
+          <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+            Designed specifically for modern Lagos apartment living rooms and open-plan lounge layouts. Features plush high-density foam cushioning upholstered in stain-resistant velvet.
+          </p>
+
+          <h3>Specifications & Key Features</h3>
+          <table class="pdp-spec-table">
+            <tr>
+              <td>Availability</td>
+              <td><span style="color: green; font-weight: 600;">In Stock (Showroom Ready)</span></td>
+            </tr>
+            <tr>
+              <td>Dimensions</td>
+              <td>280cm (Width) x 180cm (Chaise Depth) x 85cm (Height)</td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td>Hardwood Frame, High-Resilience Foam, Velvet Upholstery</td>
+            </tr>
+            <tr>
+              <td>Customization</td>
+              <td>Available in Royal Blue, Emerald Green, Charcoal, and Beige</td>
+            </tr>
+            <tr>
+              <td>Delivery</td>
+              <td>1-3 Days within Lagos State | Nationwide Shipping Available</td>
+            </tr>
+          </table>
+
+          <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <button class="btn-gold open-enquiry-modal" data-product="Lekki Velvet Corner Sectional" style="flex:1;">Enquire / Order Now</button>
+            <a href="https://wa.me/2348066723960?text=I%20am%20interested%20in%20the%20Lekki%20Velvet%20Corner%20Sectional" target="_blank" class="btn-outline">WhatsApp Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Product Enquiry Modal -->
+  <div class="modal" id="enquiryModal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>Product Enquiry</h2>
+      <form id="enquiryForm">
+        <div class="form-group">
+          <label for="enquiryProductSelect">Selected Item</label>
+          <select id="enquiryProductSelect" class="form-control">
+            <option value="Lekki Velvet Corner Sectional">Lekki Velvet Corner Sectional</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number / WhatsApp</label>
+          <input type="tel" class="form-control" required>
+        </div>
+        <button type="submit" class="btn-gold" style="width: 100%;">Submit Product Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Homefront Interiors & Furniture. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
